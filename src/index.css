@@ -1,0 +1,131 @@
+.movie-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.movie-overlay .info-card {
+  background: #ffeded;
+  color: black;
+  border-radius: 0.6rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  height: 450px;
+  width: 750px;
+  padding: 1rem 2rem 1rem 2rem;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  animation: popupScale 0.3s;
+  overflow: hidden;
+  background-color: rgba(156, 152, 152, 0);
+  backdrop-filter: blur(8px);
+}
+
+@keyframes popupScale {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.movie-overlay .info-card img {
+  width: 250px;
+  height: 400px;
+  border-radius: 0.6rem;
+}
+
+@import "tailwindcss";
+
+.kolor {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+}
+
+.kolo {
+  background-color: #212121;
+}
+
+.search-submit-btn {
+  background-color: #edecec80;
+  border: none;
+  color: white;
+  font-weight: semibold;
+  font-size: 15px;
+  padding: 0px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.search-input {
+  width: 150px;
+  padding: 0px 5px;
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid white;
+  margin: 2px;
+}
+.image-container {
+  position: relative;
+}
+.favorite-btn {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5 rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+.favorite-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.favorite-btn.active {
+  color: #ff4757;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  padding: 1rem 2rem;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  background-color: #212121;
+  color: white;
+  border-bottom: none;
+  width: 100%;
+}
+
+.navbar.glass {
+  background-color: rgba(0, 0, 0, 0.486);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 30px rgba(239, 235, 235, 0.1);
+  z-index: 100;
+}
